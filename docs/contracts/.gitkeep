@@ -1,0 +1,3 @@
+Reserved for docs/contracts/openapi/ once ADR-0004's contract strategy is
+implemented (Session 2+). Empty in Session 1 — no real API contract exists
+yet beyond the /health endpoint.

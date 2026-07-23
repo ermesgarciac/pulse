@@ -12,8 +12,11 @@ bootstrap prompt).
 - `pnpm install` at repo root installs all JS/TS workspace dependencies.
 - `cd apps/api && uv sync` (or `uv add`/`uv run`) manages Python
   dependencies in an isolated `.venv`.
-- Root `package.json` scripts fan out to both apps:
-  `format`, `lint`, `typecheck`, `test`, `build`.
+- Root `package.json` scripts `format`, `lint`, `typecheck`, `test` fan out
+  to both `apps/web` and `apps/api`. `build` only runs `apps/web`'s Vite
+  build — `apps/api` is an interpreted FastAPI service with no separate
+  build artifact; its "build correctness" proxy is `lint` + `typecheck` +
+  `test` passing.
 - No Docker Compose this session — there is no backend service worth
   containerizing yet (only a `/health` endpoint); revisit once the API has
   real persistence.

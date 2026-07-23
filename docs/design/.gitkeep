@@ -1,0 +1,4 @@
+Reserved for canonical screen/state/visual specifications once a visual
+milestone begins. Empty in Session 1 — no UI/UX work is in scope; see
+Initial Docs/07_DESIGN_SYSTEM.md and 05_CANONICAL_UX_SPEC.md for the
+canonical source until this directory has real content.

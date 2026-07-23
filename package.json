@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "format": "pnpm --filter web format",
+    "format": "pnpm --filter web format && (cd apps/api && uv run ruff format .)",
     "lint": "pnpm --filter web lint && (cd apps/api && uv run ruff check .)",
     "typecheck": "pnpm --filter web typecheck && (cd apps/api && uv run mypy app)",
     "test": "pnpm --filter web test -- --run && (cd apps/api && uv run pytest)",

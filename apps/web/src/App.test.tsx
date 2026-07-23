@@ -1,10 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 describe("App", () => {
-  it("renders without crashing", () => {
+  it("renders the scaffold's real heading content", () => {
     render(<App />);
-    expect(document.body).toBeTruthy();
+    expect(
+      screen.getByRole("heading", { name: /get started/i }),
+    ).toBeInTheDocument();
   });
 });
