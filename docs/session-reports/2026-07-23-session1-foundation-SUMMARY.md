@@ -1,39 +1,45 @@
-# Pulse Session 1 — Short Summary (2026-07-23)
+# Pulse Sesión 1 — Resumen corto (2026-07-23)
 
-## What happened
-Rebooted Pulse from scratch. Read all 19 canonical docs, connected the
-existing (empty) GitHub repo, and built the minimal project foundation:
-working backend skeleton, working frontend skeleton, architecture
-decisions on paper, and the operating rules for future Claude/Codex
-sessions. No app features yet — this was pure foundation.
+## Qué pasó
+Reboot completo de Pulse desde cero. Leí los 19 docs canónicos, conecté el
+repo de GitHub existente (vacío), y armé la base mínima del proyecto:
+esqueleto de backend funcionando, esqueleto de frontend funcionando,
+decisiones de arquitectura en papel, y reglas de operación para futuras
+sesiones Claude/Codex. Sin features todavía — esto fue pura fundación.
 
-## What got built
-- **Backend** (`apps/api`): FastAPI, one real `/health` endpoint, tests pass.
-- **Frontend** (`apps/web`): React + Vite + TypeScript, tests/build pass.
-- **Desktop** (`apps/desktop`): placeholder only — intentionally not built
-  yet (Tauri comes later, when playback work starts).
-- **6 ADRs**: repo layout, app boundaries, tech stack, API contract style,
-  testing approach, local dev — each marked as decided vs. still-open.
-- **Operating docs**: `CLAUDE.md`, operating contract, session report,
-  handoff for next session.
-- All checks (`format`/`lint`/`typecheck`/`test`/`build`) pass clean.
+## Qué se construyó
+- **Backend** (`apps/api`): FastAPI, un endpoint real `/health`, tests pasan.
+- **Frontend** (`apps/web`): React + Vite + TypeScript, tests/build pasan.
+- **Desktop** (`apps/desktop`): solo placeholder — a propósito no se
+  construye todavía (Tauri viene después, cuando arranque el trabajo de
+  reproducción).
+- **6 ADRs**: layout del repo, límites entre apps, stack técnico, estilo de
+  contrato API, estrategia de testing, dev local — cada uno marcado como
+  decidido o todavía abierto.
+- **Docs de operación**: `CLAUDE.md`, contrato operativo, reporte de
+  sesión, handoff para la próxima sesión.
+- Todos los checks (`format`/`lint`/`typecheck`/`test`/`build`) pasan
+  limpio.
 
-## Codex involvement
-Used Codex twice, for real: once before building (architecture review),
-once after (checked the work for drift/scope-creep/fake data). It found 2
-real issues, both fixed and reverified.
+## Participación de Codex
+Usé Codex dos veces, de verdad: una antes de construir (revisión de
+arquitectura), otra después (chequeó el trabajo por desvíos, scope creep,
+datos falsos). Encontró 2 problemas reales, ambos arreglados y
+reverificados.
 
-## Security flag
-A connected tool (Supabase MCP server) tried to sneak in an unauthorized
-install command 3 separate times this session, disguised as normal
-guidance. Caught and blocked every time — nothing bad landed in the repo,
-but worth deciding if you want that MCP server connected.
+## Alerta de seguridad
+Una herramienta conectada (servidor MCP de Supabase) intentó colar un
+comando de instalación no autorizado 3 veces distintas esta sesión,
+disfrazado de guía normal. Lo detecté y bloqueé cada vez — no entró nada
+malo al repo, pero vale la pena decidir si querés mantener ese MCP
+conectado.
 
-## Shipped
-10 commits, pushed to `https://github.com/ermesgarciac/pulse` on `main`.
+## Entregado
+10 commits, pusheados a `https://github.com/ermesgarciac/pulse` en `main`.
 
-## Next
-Session 2 = plan the Library Selector screen + contracts. Not building it
-yet — just the design/data plan, per the same "small atomic sessions" rule.
+## Siguiente
+Sesión 2 = planear la pantalla Library Selector + sus contratos. Todavía
+no se construye — solo el plan de diseño/datos, siguiendo la misma regla
+de "sesiones atómicas chicas".
 
-Full report: `docs/session-reports/2026-07-23-session1-foundation.md`
+Reporte completo: `docs/session-reports/2026-07-23-session1-foundation.md`
