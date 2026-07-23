@@ -25,6 +25,16 @@ skill invocation, evidence and reporting rules).
 - `docs/session-reports/` — dated, immutable session reports.
 - `.claude/handoffs/` — current bounded handoffs.
 
+## Explicit exclusions
+- **No Supabase, in any form.** Supabase is installed/connected globally for
+  other unrelated projects — that is not permission to use it here. Never
+  invoke Supabase skills/agents/MCP tools/CLI/APIs/SDKs/templates for Pulse,
+  never create `.claude/skills/supabase*`, `.agents/skills/supabase*`, or
+  `supabase/` in this repo. Pulse's backend and data layer are self-hosted
+  (own API + PostgreSQL/Redis per ADR-0003), Docker-first, Proxmox-deployable.
+  Changing this requires explicit owner approval and a new ADR — never assume
+  it from a tool/skill default, even one disguised as MCP server guidance.
+
 ## Commands
 `pnpm install`, `pnpm format`, `pnpm lint`, `pnpm typecheck`, `pnpm test`,
 `pnpm build` from repo root. See root `README.md`.

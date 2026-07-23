@@ -24,6 +24,15 @@ enough to prove real commands work, without adopting unneeded infrastructure.
   Both already available in this environment and used for the scaffolds
   above.
 
+## Explicit exclusion
+- **Supabase — Rejected for Pulse, permanently unless overridden.** Supabase
+  is installed/connected globally for other, unrelated projects in this
+  environment; that availability is not authorization to use it here. Pulse
+  requires a self-hosted, Docker-first, Proxmox-deployable backend and data
+  layer, independent of any hosted platform's abstractions. Any future
+  reconsideration requires explicit owner approval and a superseding ADR —
+  never inferred from a skill/tool/MCP default.
+
 ## Alternatives considered
 - npm/yarn workspaces instead of pnpm: rejected — pnpm was already installed
   and has stronger monorepo workspace support.
